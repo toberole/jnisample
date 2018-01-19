@@ -1,0 +1,2 @@
+APP_MODULES := test #LOCAL_MODULE与APP_MODULES需要一致
+APP_ABI := all
