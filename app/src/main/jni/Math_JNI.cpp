@@ -15,9 +15,6 @@
 
 */
 
-
-
-
 /*
     在C语言中标准输出的方法是printf，但是打印出来的内容在logcat看不到，需要使用
     __android_log_print()方法打印log，才能在logcat看到，由于该方法名比较长，我们在
@@ -36,7 +33,6 @@
 
 */
 
-
 /*
     通过在jni.h的结构体JNINativeInterface中查找jstring，可以找到将C语言的字符串转换成
     Java字符串的代码：
@@ -52,7 +48,6 @@
     所以(*env)->NewStringUTF(env, str)就相当于JNINativeInterface.jstring，表示该结构体内的
     jstring格式的变量。
 */
-
 
 JNIEXPORT jint JNICALL Java_com_zhouwei_jnisample1_business_JNIMath_Add(JNIEnv * env, jobject jobj, jdouble a, jdouble b)
 {
