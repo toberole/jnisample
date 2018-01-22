@@ -5,7 +5,8 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := test # 生成so的名字
 
 LOCAL_SRC_FILES =: Math_JNI.cpp \
-                   demo.cpp
+                   demo.cpp \
+                   C_Callback_Java.cpp
 
 include $(BUILD_SHARED_LIBRARY)
 

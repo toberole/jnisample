@@ -1,5 +1,4 @@
-D:/demo/jnisample1/app/src/main/obj/local/arm64-v8a/objs/test/Math_JNI.o: \
-  D:/demo/jnisample1/app/src/main/jni/Math_JNI.cpp \
-  D:/demo/jnisample1/app/src/main/jni/com_zhouwei_jnisample1_business_JNIMath.h
+./obj/local/arm64-v8a/objs/test/Math_JNI.o: jni/Math_JNI.cpp \
+  jni/com_zhouwei_jnisample1_business_JNIMath.h
 
-D:/demo/jnisample1/app/src/main/jni/com_zhouwei_jnisample1_business_JNIMath.h:
+jni/com_zhouwei_jnisample1_business_JNIMath.h:

@@ -1,3 +1,13 @@
+# 每次在添加了C/C++文件 注意修改Android.mk
+
+<pre>
+(JNIEnv *env, jobject jobj ...)
+env: JNI 执行环境
+jobj:当java层的native方法不是static的时候是指 调用该方法的对象；当java层的native方法是static的时候是指 native方法所在的java层类字节码对象Class
+</pre>
+
+
+
 #  JNI用法
 
 # (1).andorid CPP调用java函数和访问其成员:

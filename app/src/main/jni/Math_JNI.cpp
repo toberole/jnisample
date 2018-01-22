@@ -50,6 +50,8 @@
     jstring格式的变量。
 */
 
+
+// JNIEXPORT 和 JNICALL JNI的导出标志
 JNIEXPORT jint JNICALL Java_com_zhouwei_jnisample1_business_JNIMath_Add(JNIEnv * env, jobject jobj, jdouble a, jdouble b)
 {
       return a+b;
