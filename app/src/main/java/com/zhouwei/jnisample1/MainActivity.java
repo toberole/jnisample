@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.zhouwei.jnisample1.business.JNIDemo;
 import com.zhouwei.jnisample1.business.JNIMath;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,5 +16,9 @@ public class MainActivity extends AppCompatActivity {
 
         JNIMath jniMath = new JNIMath();
         Log.i("AAAA", "a+b=" + jniMath.Add(1, 2));
+
+        JNIDemo demo = new JNIDemo();
+        String str = demo.getString();
+        Log.i("AAAA", "str: " + str);
     }
 }

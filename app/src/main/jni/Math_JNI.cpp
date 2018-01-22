@@ -1,7 +1,8 @@
 //
 // Created by zhouwei11 on 2018/1/19.
 //
-
+#include <stdio.h>
+#include <stdlib.h>
 #include "com_zhouwei_jnisample1_business_JNIMath.h"
 
 /*
