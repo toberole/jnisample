@@ -9,11 +9,27 @@ extern "C" {
 #endif
 /*
  * Class:     com_zhouwei_jnisample1_business_C_Callback_Java
+ * Method:    doWithString
+ * Signature: (Ljava/lang/String;)Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_com_zhouwei_jnisample1_business_C_1Callback_1Java_doWithString
+  (JNIEnv *, jobject, jstring);
+
+/*
+ * Class:     com_zhouwei_jnisample1_business_C_Callback_Java
  * Method:    getInfo
  * Signature: (Lcom/zhouwei/jnisample1/business/C_Callback_Java/CallBack;)V
  */
 JNIEXPORT void JNICALL Java_com_zhouwei_jnisample1_business_C_1Callback_1Java_getInfo
   (JNIEnv *, jobject, jobject);
+
+/*
+ * Class:     com_zhouwei_jnisample1_business_C_Callback_Java
+ * Method:    c_call_me_print
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_com_zhouwei_jnisample1_business_C_1Callback_1Java_c_1call_1me_1print
+  (JNIEnv *, jobject);
 
 #ifdef __cplusplus
 }

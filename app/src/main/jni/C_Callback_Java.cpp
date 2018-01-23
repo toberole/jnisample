@@ -21,6 +21,21 @@ JNIEXPORT void JNICALL Java_com_zhouwei_jnisample1_business_C_1Callback_1Java_ge
      (*env).ReleaseStringUTFChars(info,str);
 }
 
+// 访问发起调用的java类里面的方法
+JNIEXPORT void JNICALL Java_com_zhouwei_jnisample1_business_C_1Callback_1Java_c_1call_1me_1print(JNIEnv *env, jobject jobj)
+{
+	jclass cls = env->GetObjectClass(jobj);
+	jmethodID jmid = env->GetMethodID(cls,"print","()V");
+	env->CallVoidMethod(jobj,jmid);
+}
+
+// 处理java传递下来的String 返回值String
+JNIEXPORT jstring JNICALL Java_com_zhouwei_jnisample1_business_C_1Callback_1Java_doWithString(JNIEnv *env, jobject jobj, jstring js)
+{
+	return NULL;
+}
+
+
 
 
 

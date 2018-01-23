@@ -2,10 +2,55 @@
 
 <pre>
 (JNIEnv *env, jobject jobj ...)
-env: JNI 执行环境
-jobj:当java层的native方法不是static的时候是指 调用该方法的对象；当java层的native方法是static的时候是指 native方法所在的java层类字节码对象Class
+	env: JNI 执行环境
+	jobj:当java层的native方法不是static的时候是指 调用该方法的对象；当java层的native方法是static的时候是指 native方法所在的java层类字节码对象Class
+
+JNIEnv *env参数的使用
+
+所有JNI接口的第一个参数是JNIEnv *env, 在C中，使用方法是
+
+(*env)->NewStringUTF(env, "Hello from JNI!");
+
+但在C++中，其调用方法是
+
+env->NewStringUTF("Hello from JNI!");
+
+为什么有这种区别呢，看看jni.h中关于JNIEnv的定义就可以知道了：
+
+#if defined(__cplusplus)
+
+typedef _JNIEnv JNIEnv;
+
+#else
+
+typedef const struct JNINativeInterface* JNIEnv;
+
+#endif
+
+可以看到，对于C和C++，定义有所不同，主要原因是C不支持类，所以采用了一种变通的方法。
 </pre>
 
+
+<pre>
+
+JNI接口 都是以C的方式定义的，如果是使用C++实现，函数定义需要加上extern "C"
+为此可以定义一个头文件，在CPP文件中include该头文件，头文件加上如下代码片断：
+
+#ifdef __cplusplus
+
+extern "C" {
+
+#endif
+
+#endif
+
+...
+
+#ifdef __cplusplus
+
+}
+
+</pre>
 
 
 #  JNI用法

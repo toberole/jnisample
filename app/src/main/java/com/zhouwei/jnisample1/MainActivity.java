@@ -29,5 +29,9 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("AAAA", "content: " + content);
             }
         });
+
+        c_callback_java.c_call_me_print();
+
+        Log.i("AAAA", "doWithString: " + c_callback_java.doWithString("abc"));
     }
 }

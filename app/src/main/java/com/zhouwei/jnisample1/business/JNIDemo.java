@@ -9,19 +9,42 @@ public class JNIDemo {
         System.loadLibrary("test");
     }
 
+    // ()V
     public native void test();
+
+    // ()B
     public native byte getByte();
+
+    // ()C
     public native char getChar();
+
+    // ()S
     public native short getShort();
+
+    // ()I
     public native int getInt();
+
+    // ()F
     public native float getFloat();
+
+    // ()D
     public native double getDouble();
+
+    // ()Ljava/lang/String;
     public native String getString();
 
+    // (B)V
     public native void test1(byte b);
+
+    // (C)V
     public native void test2(char c);
+
+    // (S)V
     public native void test3(short s);
+
+    // (SI)V
     public native void test4(short s,int a);
+
     // (SI)I
     public native int test44(short s,int a);
 
