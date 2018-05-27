@@ -1,4 +1,4 @@
-# 每次在添加了C/C++文件 注意修改Android.mk
+
 
 <pre>
 (JNIEnv *env, jobject jobj ...)
